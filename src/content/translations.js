@@ -1,5 +1,4 @@
 // Internationalization strings for IT and EN
-// Extracted from the original app.js
 export default {
   it: {
     skip: "Vai ai corsi",
@@ -24,6 +23,7 @@ export default {
     wiki: "Consulta la wiki",
     goUp: "Vai su",
     unavailable: "Non disponibile",
+    copyrightNotice: "dal 2021"
   },
   en: {
     skip: "Go to degree programmes",
@@ -48,5 +48,6 @@ export default {
     wiki: "Browse the wiki",
     goUp: "Back to top",
     unavailable: "Not available",
+    copyrightNotice: "since 2021"
   },
 };
