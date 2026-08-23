@@ -9,6 +9,9 @@ interface Props {
 }
 
 const { language } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const itHref = `${base}/` || '/';
+const enHref = `${base}/en`;
 ---
 
 <!doctype html>
@@ -36,7 +39,7 @@ const { language } = Astro.props;
             content="https://26-27.sapienzastudents.net/ssn-logo.png"
         />
 
-        <link rel="icon" type="image/png" href="/ssn-crest.png" />
+        <link rel="icon" type="image/png" href={`${base}/ssn-crest.png`} />
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -53,27 +56,29 @@ const { language } = Astro.props;
             }
         </title>
 
-        <script is:inline>
+        <script is:inline define:vars={{ base, itHref, enHref }}>
             (function () {
                 var path = window.location.pathname;
+                var normalizedPath = base && path.startsWith(base) ? path.slice(base.length) : path;
+                var isEn = normalizedPath.startsWith("/en");
                 var params = new URLSearchParams(window.location.search);
                 var langParam = params.get("lang");
-                if (langParam === "en" && !path.startsWith("/en")) {
+                if (langParam === "en" && !isEn) {
                     try {
                         localStorage.setItem("ssn-lang", "en");
                     } catch (e) {}
-                    window.location.replace("/en");
+                    window.location.replace(enHref);
                     return;
                 }
-                if (langParam === "it" && path.startsWith("/en")) {
+                if (langParam === "it" && isEn) {
                     try {
                         localStorage.setItem("ssn-lang", "it");
                     } catch (e) {}
-                    window.location.replace("/");
+                    window.location.replace(itHref);
                     return;
                 }
                 try {
-                    if (path.startsWith("/en")) {
+                    if (isEn) {
                         localStorage.setItem("ssn-lang", "en");
                     } else {
                         localStorage.setItem("ssn-lang", "it");
