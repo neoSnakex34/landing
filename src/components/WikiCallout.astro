@@ -13,7 +13,7 @@ const { notOnly, title, text, cta } = Astro.props;
     class="wiki-callout max-w-[1120px] mx-auto px-5 my-[55px] max-md:my-[45px]"
 >
     <div
-        class="grid grid-cols-[auto_1fr] max-md:grid-cols-1 md:grid-cols-[auto_1fr_auto] items-center gap-[22px] bg-primary/90 text-[#10130c] rounded-[24px] p-[30px] max-md:p-[22px]"
+        class="grid grid-cols-[auto_1fr] max-md:grid-cols-1 md:grid-cols-[auto_1fr_auto] items-center gap-[22px] bg-[#cbd1db] text-[#10130c] rounded-[24px] p-[30px] max-md:p-[22px]"
     >
         <div
             class="book w-[62px] h-[62px] flex-shrink-0 grid place-items-center bg-[#111] rounded-[17px] max-[410px]:hidden"
@@ -21,7 +21,7 @@ const { notOnly, title, text, cta } = Astro.props;
             <svg
                 viewBox="0 0 24 24"
                 aria-hidden="true"
-                class="w-[30px] h-[30px] fill-none stroke-primary stroke-[1.8]"
+                class="w-[30px] h-[30px] fill-none stroke-[#cbd1db] stroke-[1.8]"
             >
                 <path
                     d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5v14Zm0 0A2.5 2.5 0 0 0 6.5 22H20v-5H6.5A2.5 2.5 0 0 0 4 19.5Z"
@@ -30,7 +30,7 @@ const { notOnly, title, text, cta } = Astro.props;
         </div>
         <div class="content">
             <span
-                class="text-[13px] font-extrabold uppercase tracking-[0.15em] block mb-1.5"
+                class="text-[13px] font-extrabold uppercase tracking-[0.15em] block mb-1.5 text-[#10130c]/75"
                 >{notOnly}</span
             >
             <h2
@@ -39,14 +39,14 @@ const { notOnly, title, text, cta } = Astro.props;
                 {title}
             </h2>
             <p
-                class="text-[16px] md:text-[18px] text-[#39402c] max-w-[650px] font-medium m-0"
+                class="text-[16px] md:text-[18px] text-[#2a323d] max-w-[650px] font-medium m-0"
             >
                 {text}
             </p>
         </div>
         <a
             href="https://sapienzastudents.net"
-            class="bg-[#111] text-primary no-underline font-bold text-[18px] px-[17px] py-[13px] rounded-xl whitespace-nowrap text-center max-md:col-span-full hover:bg-black/85 transition-colors"
+            class="bg-[#111] text-[#cbd1db] no-underline font-bold text-[18px] px-[17px] py-[13px] rounded-xl whitespace-nowrap text-center max-md:col-span-full hover:bg-black/85 transition-colors"
         >
             {cta}
         </a>
