@@ -14,4 +14,8 @@ import { defineConfig } from 'astro/config';
 
 export default defineConfig({
   site: 'https:neosnakex34.github.io',
-  base: '/landing', });
+  base: '/landing',
+  vite: {
+    plugins: [tailwindcss()],
+  },
+});
