@@ -66,8 +66,13 @@ const { title, waText, tgText, scrollInvitationText } = Astro.props;
         </article>
     </div>
     <div
-        class="text-text-dim flex font-bold justify-center items-center text-center text-[18px] md:text-[20px] pt-[40px] max-md:pt-[32px]"
+        class="flex font-bold justify-center items-center text-center text-[18px] md:text-[20px] pt-[40px] max-md:pt-[32px]"
     >
-        {scrollInvitationText}
+        <a
+            href="#courses"
+            class="text-text-dim hover:text-white underline underline-offset-4 decoration-text-dim/60 hover:decoration-white transition-colors cursor-pointer"
+        >
+            {scrollInvitationText}
+        </a>
     </div>
 </section>
