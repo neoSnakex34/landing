@@ -5,21 +5,87 @@
   --font-sans: 'IBM Plex Sans', system-ui, sans-serif;
   --font-heading: 'IBM Plex Sans', system-ui, sans-serif;
 
-  --color-subject-burgundy: #6d3438;
-  --color-subject-navy: #23395b;
-  --color-subject-petrol: #1f3d4d;
-  --color-subject-forest: #3b4c3b;
-  --color-subject-olive: #5d5635;
-  --color-subject-plum: #4b365f;
+  /* ==========================================================================
+     Course Subject Colors
+     ========================================================================== */
+  --color-subject-burgundy: #6d3438; /* ACSAI (Applied Computer Science & AI) */
+  --color-subject-navy: #23395b;     /* Informatica Triennale (A-L & M-Z) */
+  --color-subject-petrol: #1f3d4d;   /* Informatica Triennale (a distanza / online) */
+  --color-subject-forest: #3b4c3b;   /* Computer Science (Magistrale) */
+  --color-subject-olive: #5d5635;    /* Cybersecurity (Magistrale) */
+  --color-subject-plum: #4b365f;     /* Data Science (Magistrale) */
+
+  /* ==========================================================================
+     Platform Brand Colors
+     ========================================================================== */
+  --color-brand-whatsapp: #20bb68;       /* WhatsApp official green badge & accent */
+  --color-brand-whatsapp-text: #8ff0b7;  /* WhatsApp button text (mint light) */
+  --color-brand-telegram: #38a9e6;       /* Telegram official blue badge & accent */
+  --color-brand-telegram-text: #86d7ff;  /* Telegram button text (sky light) */
+
+  /* ==========================================================================
+     Surfaces & Card Backgrounds
+     ========================================================================== */
+  --color-surface-card: #10131a;         /* Dark card background & gradient end */
+  --color-surface-card-start: #171b24;   /* Gradient start for HowSection cards */
+  --color-surface-btn: #171b23;          /* Dark button background (Wiki action) */
+  --color-surface-btn-mix: #151922;      /* Button mix base for social action buttons */
+  --color-surface-btn-border: #272c37;   /* Button border mix base */
+  --color-surface-disabled: #14171f;     /* Disabled button surface */
+  --color-surface-light: #cbd1db;        /* Light silver background for Wiki callout */
+  --color-surface-btn-light: #f5f6f8;    /* Off-white CTA button background */
+
+  /* ==========================================================================
+     Typography & Text Shades
+     ========================================================================== */
+  --color-text-dim: #cbd1db;             /* Primary muted silver-gray body/lead text */
+  --color-text-bright: #e9ebef;          /* High-contrast brand / header text */
+  --color-text-button: #d1d6df;          /* Neutral action button text */
+  --color-text-dark: #10130c;            /* Dark headings on light Wiki callout */
+  --color-text-dark-muted: #2a323d;      /* Dark body copy on light Wiki callout */
+  --color-text-dark-cta: #101217;        /* Dark text on light CTA jump button */
+
+  /* ==========================================================================
+     Borders & Separators
+     ========================================================================== */
+  --color-border-subtle: #777788;        /* Subtle slate border mixing color */
 }
 
 :root {
+  /* Course Subjects */
   --color-subject-burgundy: #6d3438;
   --color-subject-navy: #23395b;
   --color-subject-petrol: #1f3d4d;
   --color-subject-forest: #3b4c3b;
   --color-subject-olive: #5d5635;
   --color-subject-plum: #4b365f;
+
+  /* Brands */
+  --color-brand-whatsapp: #20bb68;
+  --color-brand-whatsapp-text: #8ff0b7;
+  --color-brand-telegram: #38a9e6;
+  --color-brand-telegram-text: #86d7ff;
+
+  /* Surfaces */
+  --color-surface-card: #10131a;
+  --color-surface-card-start: #171b24;
+  --color-surface-btn: #171b23;
+  --color-surface-btn-mix: #151922;
+  --color-surface-btn-border: #272c37;
+  --color-surface-disabled: #14171f;
+  --color-surface-light: #cbd1db;
+  --color-surface-btn-light: #f5f6f8;
+
+  /* Text */
+  --color-text-dim: #cbd1db;
+  --color-text-bright: #e9ebef;
+  --color-text-button: #d1d6df;
+  --color-text-dark: #10130c;
+  --color-text-dark-muted: #2a323d;
+  --color-text-dark-cta: #101217;
+
+  /* Borders */
+  --color-border-subtle: #777788;
 }
 
 @plugin "daisyui/theme" {
@@ -97,7 +163,7 @@ body {
 
 .course-card {
   container-type: inline-size;
-  transition: transform 0.2s ease, border-color 0.2s ease;
+  transition: border-color 0.2s ease;
 }
 
 .course-card:hover {

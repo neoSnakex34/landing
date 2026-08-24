@@ -5,7 +5,7 @@ export const COURSES = [
   {
     id: "acsai",
     type: "bachelor",
-    color: "#6d3438",
+    color: "var(--color-subject-burgundy)",
     name: "ACSAI",
     full: {
       it: "Applied Computer Science and Artificial Intelligence",
@@ -19,7 +19,7 @@ export const COURSES = [
   {
     id: "info-al",
     type: "bachelor",
-    color: "#23395b",
+    color: "var(--color-subject-navy)",
     name: "Informatica · A–L",
     full: {
       it: "Laurea triennale",
@@ -33,7 +33,7 @@ export const COURSES = [
   {
     id: "info-mz",
     type: "bachelor",
-    color: "#23395b",
+    color: "var(--color-subject-navy)",
     name: "Informatica · M–Z",
     full: {
       it: "Laurea triennale",
@@ -47,7 +47,7 @@ export const COURSES = [
   {
     id: "info-distance",
     type: "bachelor",
-    color: "#1f3d4d",
+    color: "var(--color-subject-petrol)",
     name: "Informatica · a distanza",
     full: {
       it: "Laurea triennale · teledidattica",
@@ -60,7 +60,7 @@ export const COURSES = [
   {
     id: "compsci",
     type: "master",
-    color: "#3b4c3b",
+    color: "var(--color-subject-forest)",
     name: "Computer Science",
     full: {
       it: "Laurea magistrale",
@@ -73,7 +73,7 @@ export const COURSES = [
   {
     id: "cybersec",
     type: "master",
-    color: "#5d5635",
+    color: "var(--color-subject-olive)",
     name: "Cybersecurity",
     full: {
       it: "Laurea magistrale",
@@ -86,7 +86,7 @@ export const COURSES = [
   {
     id: "datasci",
     type: "master",
-    color: "#4b365f",
+    color: "var(--color-subject-plum)",
     name: "Data Science",
     full: {
       it: "Laurea magistrale",

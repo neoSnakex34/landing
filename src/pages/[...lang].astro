@@ -37,6 +37,13 @@ const masterCourses = COURSES.filter((c) => c.type === "master");
         chooseText={t.choose}
     />
 
+    <!-- How Section (WhatsApp & Telegram) -->
+    <HowSection
+        title={t.howTitle}
+        waText={t.waText}
+        tgText={t.tgText}
+        scrollInvitationText={t.scrollInvitationText}
+    />
     <!-- Courses Section -->
     <CoursesSection
         bachelorLabel={t.findLabel}
@@ -49,9 +56,6 @@ const masterCourses = COURSES.filter((c) => c.type === "master");
         masterCourses={masterCourses}
         language={language}
     />
-
-    <!-- How Section (WhatsApp & Telegram) -->
-    <HowSection title={t.howTitle} waText={t.waText} tgText={t.tgText} />
 
     <!-- Wiki Callout Section -->
     <WikiCallout
